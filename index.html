@@ -1,146 +1,317 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Custom automation systems, Telegram bots, Android apps and scalable software solutions for businesses.">
-<meta name="keywords" content="Telegram bot developer, Android developer, automation systems, custom software, Uzbekistan developer">
-<meta name="author" content="Abdullajon Najimiddinov">
 
-<title>Abdullajon Najimiddinov | Automation & Software Engineer</title>
+<title>Abdullajon Najimiddinov</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="AI | Dasturlash | Robototexnika">
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:25px;
+
+background:
+linear-gradient(
+135deg,
+#0F2D4D,
+#174871,
+#0F2D4D
+);
+
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:700px;
+height:700px;
+background:
+radial-gradient(
+circle,
+rgba(167,118,147,.25),
+transparent 70%
+);
+top:-250px;
+right:-200px;
+pointer-events:none;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:
+radial-gradient(
+circle,
+rgba(222,209,198,.15),
+transparent 70%
+);
+bottom:-250px;
+left:-200px;
+pointer-events:none;
+}
+
+.container{
+width:100%;
+max-width:460px;
+}
+
+.card{
+
+background:
+rgba(242,243,244,.08);
+
+backdrop-filter:blur(22px);
+
+border:
+1px solid rgba(242,243,244,.15);
+
+border-radius:32px;
+
+padding:35px 25px;
+
+text-align:center;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.25);
+}
+
+.avatar-ring{
+width:190px;
+height:190px;
+margin:auto;
+
+padding:4px;
+
+border-radius:50%;
+
+background:
+linear-gradient(
+135deg,
+#DED1C6,
+#A77693,
+#174871
+);
+}
+
+.avatar{
+width:100%;
+height:100%;
+overflow:hidden;
+border-radius:50%;
+border:5px solid #0F2D4D;
+}
+
+.avatar img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+h1{
+margin-top:22px;
+font-size:30px;
+font-weight:800;
+line-height:1.2;
+letter-spacing:.5px;
+color:#F2F3F4;
+}
+
+.subtitle{
+margin-top:12px;
+font-size:15px;
+color:#DED1C6;
+}
+
+.status{
+margin-top:12px;
+font-size:14px;
+font-weight:600;
+color:#DED1C6;
+}
+
+.links{
+margin-top:30px;
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.link{
+
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+
+padding:18px;
+
+text-decoration:none;
+
+background:
+linear-gradient(
+135deg,
+#174871,
+#0F2D4D
+);
+
+color:#F2F3F4;
+
+border-radius:18px;
+
+font-weight:600;
+
+border:
+1px solid rgba(242,243,244,.08);
+
+transition:.35s;
+}
+
+.link:hover{
+
+transform:
+translateY(-4px);
+
+background:
+linear-gradient(
+135deg,
+#A77693,
+#174871
+);
+
+box-shadow:
+0 0 20px rgba(167,118,147,.45),
+0 0 40px rgba(23,72,113,.35);
+}
+
+.link i{
+font-size:20px;
+}
+
+.footer{
+margin-top:25px;
+font-size:13px;
+color:#DED1C6;
+opacity:.75;
+}
+
+@media(max-width:500px){
+
+.avatar-ring{
+width:165px;
+height:165px;
+}
+
+h1{
+font-size:24px;
+}
+
+.card{
+padding:25px 18px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-<div id="particles-js"></div>
+<div class="container">
 
-<header>
-  <div class="logo">AN</div>
-</header>
+<div class="card">
 
-<section class="hero">
-  <div class="hero-text">
-    <h1>ABDULLAJON<br>NAJIMIDDINOV</h1>
+<div class="avatar-ring">
 
-    <h2>I build custom automation systems and scalable software solutions for businesses.</h2>
+<div class="avatar">
+<img src="profile.jpg" alt="Abdullajon">
+</div>
 
-    <div class="hero-buttons">
-      <a href="https://t.me/najimiddinov" target="_blank" class="btn">🚀 Start a Project</a>
-      <a href="#projects" class="btn-outline">View Projects</a>
-    </div>
-  </div>
+</div>
 
-  <div class="hero-image">
-    <img src="profile.jpg" alt="Profile">
-  </div>
-</section>
+<h1>
+ABDULLAJON<br>
+NAJIMIDDINOV
+</h1>
 
-<!-- SERVICES -->
-<section class="section">
-  <h2 class="section-title">Services</h2>
-  <div class="projects-grid">
+<div class="subtitle">
+AI • Dasturlash • Robototexnika
+</div>
 
-    <div class="card">
-      <h3>Telegram Bot Development</h3>
-      <p>Custom bots for automation, sales systems and business workflows.</p>
-    </div>
+<div class="status">
+🟢 Online
+</div>
 
-    <div class="card">
-      <h3>Android App Development</h3>
-      <p>Admin panels, order management apps and scalable mobile systems.</p>
-    </div>
+<div class="links">
 
-    <div class="card">
-      <h3>Automation Systems</h3>
-      <p>API integrations, Firebase backend and workflow automation solutions.</p>
-    </div>
+<a class="link"
+href="https://t.me/najimiddinov"
+target="_blank">
 
-    <div class="card">
-      <h3>Custom Software Solutions</h3>
-      <p>Tailored digital systems built specifically for business growth.</p>
-    </div>
+<i class="fa-brands fa-telegram"></i>
+Telegram
 
-  </div>
-</section>
+</a>
 
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <h2 class="section-title">Projects</h2>
-  <div class="projects-grid">
+<a class="link"
+href="https://instagram.com/najimiddinov_605"
+target="_blank">
 
-    <div class="card">
-      <h3>FastFood Telegram Automation Bot</h3>
-      <a href="https://github.com/Najimiddinov" target="_blank">GitHub</a>
-    </div>
+<i class="fa-brands fa-instagram"></i>
+@najimiddinov_605
 
-    <div class="card">
-      <h3>Android Admin Management Panel</h3>
-      <a href="https://github.com/Najimiddinov" target="_blank">GitHub</a>
-    </div>
+</a>
 
-    <div class="card">
-      <h3>Firebase Order Processing System</h3>
-      <a href="https://github.com/Najimiddinov" target="_blank">GitHub</a>
-    </div>
+<a class="link"
+href="https://instagram.com/_najimiddinov_"
+target="_blank">
 
-    <div class="card">
-      <h3>3D Mechanical Design Project</h3>
-      <a href="https://github.com/Najimiddinov" target="_blank">GitHub</a>
-    </div>
+<i class="fa-brands fa-instagram"></i>
+@_najimiddinov_
 
-  </div>
-</section>
+</a>
 
-<!-- WHY WORK WITH ME -->
-<section class="section">
-  <h2 class="section-title">Why Work With Me</h2>
-  <div class="projects-grid">
+<a class="link"
+href="https://github.com/Najimiddinov"
+target="_blank">
 
-    <div class="card">
-      <h3>Clean Architecture</h3>
-      <p>Well-structured and maintainable systems.</p>
-    </div>
+<i class="fa-brands fa-github"></i>
+GitHub
 
-    <div class="card">
-      <h3>Scalable & Secure</h3>
-      <p>Built for growth with security best practices.</p>
-    </div>
+</a>
 
-    <div class="card">
-      <h3>Fast Delivery</h3>
-      <p>Efficient development without sacrificing quality.</p>
-    </div>
+</div>
 
-    <div class="card">
-      <h3>Long-Term Support</h3>
-      <p>Ongoing improvements and reliable technical support.</p>
-    </div>
+<div class="footer">
+© 2026 Abdullajon Najimiddinov
+</div>
 
-  </div>
-</section>
+</div>
 
-<!-- CONTACT -->
-<section id="contact" class="section contact">
-  <h2 class="section-title">Contact</h2>
-
-  <div class="socials">
-    <a href="https://t.me/najimiddinov" target="_blank">Telegram</a>
-    <a href="mailto:sr.abdulla.an@gmail.com">Email</a>
-    <a href="https://github.com/Najimiddinov" target="_blank">GitHub</a>
-    <a href="https://www.instagram.com/najimiddinov_605" target="_blank" class="secondary">Instagram</a>
-  </div>
-
-  <p class="copyright">
-    © 2026 Abdullajon Najimiddinov. All rights reserved.
-  </p>
-</section>
-
-<script src="script.js"></script>
+</div>
 
 </body>
 </html>
+```
