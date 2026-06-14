@@ -1,317 +1,389 @@
-```html
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abdullajon Najimiddinov — AI · Dasturlash · Robototexnika</title>
+<meta name="description" content="Abdullajon Najimiddinov — AI, dasturlash va robototexnika. Telegram, Instagram va GitHub havolalari." />
 
-<title>Abdullajon Najimiddinov</title>
+<!-- Open Graph (link ulashilganda chiroyli ko'rinishi uchun) -->
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Abdullajon Najimiddinov" />
+<meta property="og:description" content="AI · Dasturlash · Robototexnika" />
+<meta name="theme-color" content="#0B2440" />
 
-<meta name="description" content="AI | Dasturlash | Robototexnika">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
 <style>
+  :root{
+    --navy-900:#0B2440;
+    --navy-800:#0F2D4D;
+    --navy-600:#174871;
+    --mauve:#A77693;
+    --sand:#DED1C6;
+    --white:#F2F3F4;
+    --live:#4ADE80;
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
+    --glass:rgba(242,243,244,.055);
+    --glass-border:rgba(242,243,244,.14);
+    --radius:30px;
 
-body{
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:25px;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
 
-background:
-linear-gradient(
-135deg,
-#0F2D4D,
-#174871,
-#0F2D4D
-);
+  *{margin:0;padding:0;box-sizing:border-box;}
 
-overflow-x:hidden;
-}
+  html,body{height:100%;}
 
-body::before{
-content:"";
-position:fixed;
-width:700px;
-height:700px;
-background:
-radial-gradient(
-circle,
-rgba(167,118,147,.25),
-transparent 70%
-);
-top:-250px;
-right:-200px;
-pointer-events:none;
-}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--white);
+    background:var(--navy-900);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:28px 18px;
+    overflow-x:hidden;
+    position:relative;
+    -webkit-font-smoothing:antialiased;
+  }
 
-body::after{
-content:"";
-position:fixed;
-width:600px;
-height:600px;
-background:
-radial-gradient(
-circle,
-rgba(222,209,198,.15),
-transparent 70%
-);
-bottom:-250px;
-left:-200px;
-pointer-events:none;
-}
+  /* ---------- Jonli aurora fon ---------- */
+  .aurora{
+    position:fixed;
+    inset:-30vmax;
+    z-index:-2;
+    filter:blur(60px) saturate(120%);
+    opacity:.9;
+  }
+  .aurora span{
+    position:absolute;
+    border-radius:50%;
+    mix-blend-mode:screen;
+    animation:drift 22s var(--ease) infinite alternate;
+  }
+  .aurora .b1{width:46vmax;height:46vmax;top:2%;right:6%;
+    background:radial-gradient(circle,rgba(167,118,147,.55),transparent 62%);}
+  .aurora .b2{width:50vmax;height:50vmax;bottom:0%;left:2%;
+    background:radial-gradient(circle,rgba(23,72,113,.7),transparent 60%);
+    animation-duration:28s;animation-delay:-6s;}
+  .aurora .b3{width:34vmax;height:34vmax;top:30%;left:32%;
+    background:radial-gradient(circle,rgba(222,209,198,.28),transparent 60%);
+    animation-duration:32s;animation-delay:-12s;}
 
-.container{
-width:100%;
-max-width:460px;
-}
+  @keyframes drift{
+    from{transform:translate3d(0,0,0) scale(1);}
+    to{transform:translate3d(6vmax,-5vmax,0) scale(1.18);}
+  }
 
-.card{
+  /* Nozik grain teksturasi */
+  body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+    opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
 
-background:
-rgba(242,243,244,.08);
+  /* ---------- Kartochka ---------- */
+  .container{width:100%;max-width:440px;}
 
-backdrop-filter:blur(22px);
+  .card{
+    position:relative;
+    background:var(--glass);
+    backdrop-filter:blur(26px);
+    -webkit-backdrop-filter:blur(26px);
+    border:1px solid var(--glass-border);
+    border-radius:var(--radius);
+    padding:38px 26px 28px;
+    text-align:center;
+    box-shadow:
+      0 30px 70px -20px rgba(0,0,0,.55),
+      inset 0 1px 0 rgba(255,255,255,.08);
+    overflow:hidden;
+  }
+  /* yuqori chetdagi nozik yorug'lik */
+  .card::before{
+    content:"";
+    position:absolute;
+    top:0;left:50%;
+    transform:translateX(-50%);
+    width:70%;height:1px;
+    background:linear-gradient(90deg,transparent,rgba(222,209,198,.6),transparent);
+  }
 
-border:
-1px solid rgba(242,243,244,.15);
+  /* ---------- Avatar ---------- */
+  .avatar-ring{
+    position:relative;
+    width:128px;height:128px;
+    margin:0 auto;
+    padding:4px;
+    border-radius:50%;
+  }
+  .avatar-ring::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    padding:3px;
+    background:conic-gradient(from 0deg,var(--sand),var(--mauve),var(--navy-600),var(--sand));
+    -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;
+            mask-composite:exclude;
+    animation:spin 7s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
 
-border-radius:32px;
+  .avatar{
+    position:relative;
+    width:100%;height:100%;
+    border-radius:50%;
+    overflow:hidden;
+    background:linear-gradient(135deg,var(--navy-600),var(--navy-800));
+    display:grid;place-items:center;
+  }
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block;}
+  .avatar .fallback{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;
+    font-size:42px;
+    color:var(--sand);
+    letter-spacing:1px;
+  }
 
-padding:35px 25px;
+  .live-dot{
+    position:absolute;
+    bottom:8px;right:8px;
+    width:20px;height:20px;
+    border-radius:50%;
+    background:var(--live);
+    border:3px solid var(--navy-800);
+    box-shadow:0 0 0 0 rgba(74,222,128,.55);
+    animation:pulse 2.4s var(--ease) infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(74,222,128,.5);}
+    70%{box-shadow:0 0 0 12px rgba(74,222,128,0);}
+    100%{box-shadow:0 0 0 0 rgba(74,222,128,0);}
+  }
 
-text-align:center;
+  /* ---------- Matn ---------- */
+  .name-row{
+    margin-top:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+  }
+  h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:25px;
+    font-weight:700;
+    letter-spacing:.2px;
+    line-height:1.1;
+  }
+  .verified{
+    color:var(--mauve);
+    font-size:19px;
+    line-height:1;
+    flex-shrink:0;
+  }
 
-box-shadow:
-0 20px 50px rgba(0,0,0,.25);
-}
+  .subtitle{
+    margin-top:10px;
+    font-size:14px;
+    font-weight:500;
+    color:var(--sand);
+    letter-spacing:.3px;
+  }
 
-.avatar-ring{
-width:190px;
-height:190px;
-margin:auto;
+  .meta{
+    margin-top:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    flex-wrap:wrap;
+  }
+  .chip{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:6px 12px;
+    font-size:12px;
+    font-weight:500;
+    color:var(--sand);
+    background:rgba(242,243,244,.06);
+    border:1px solid rgba(242,243,244,.1);
+    border-radius:999px;
+  }
+  .chip .ok{color:var(--live);}
 
-padding:4px;
+  /* ---------- Havolalar ---------- */
+  .links{
+    margin-top:26px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .link{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:13px 16px;
+    text-decoration:none;
+    color:var(--white);
+    background:rgba(242,243,244,.04);
+    border:1px solid rgba(242,243,244,.09);
+    border-radius:16px;
+    transition:transform .35s var(--ease),
+               background .35s var(--ease),
+               border-color .35s var(--ease),
+               box-shadow .35s var(--ease);
+  }
+  .link .icon{
+    flex-shrink:0;
+    width:42px;height:42px;
+    display:grid;place-items:center;
+    border-radius:12px;
+    font-size:18px;
+    background:linear-gradient(135deg,var(--navy-600),var(--navy-800));
+    border:1px solid rgba(242,243,244,.08);
+    transition:transform .35s var(--ease);
+  }
+  .link .text{flex:1;text-align:left;min-width:0;}
+  .link .text .t{font-size:14px;font-weight:600;}
+  .link .text .h{
+    font-size:12px;color:var(--sand);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .link .chev{
+    color:var(--sand);font-size:13px;
+    transition:transform .35s var(--ease),color .35s var(--ease);
+  }
 
-border-radius:50%;
+  .link:hover,.link:focus-visible{
+    transform:translateY(-3px);
+    background:rgba(167,118,147,.14);
+    border-color:rgba(167,118,147,.4);
+    box-shadow:0 14px 30px -12px rgba(167,118,147,.5);
+    outline:none;
+  }
+  .link:hover .icon,.link:focus-visible .icon{
+    transform:scale(1.06) rotate(-3deg);
+  }
+  .link:hover .chev,.link:focus-visible .chev{
+    transform:translateX(4px);
+    color:var(--white);
+  }
+  .link:focus-visible{box-shadow:0 0 0 3px rgba(222,209,198,.55);}
 
-background:
-linear-gradient(
-135deg,
-#DED1C6,
-#A77693,
-#174871
-);
-}
+  /* brand ranglar */
+  .link.tg .icon{background:linear-gradient(135deg,#229ED9,#1c7eb0);}
+  .link.ig .icon{background:linear-gradient(135deg,#C13584,#E1306C,#F77737);}
+  .link.gh .icon{background:linear-gradient(135deg,#2b3340,#171a21);}
 
-.avatar{
-width:100%;
-height:100%;
-overflow:hidden;
-border-radius:50%;
-border:5px solid #0F2D4D;
-}
+  /* ---------- Footer ---------- */
+  .footer{
+    margin-top:24px;
+    font-size:12px;
+    color:var(--sand);
+    opacity:.65;
+    letter-spacing:.3px;
+  }
 
-.avatar img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
+  /* ---------- Kirish animatsiyasi ---------- */
+  .reveal{opacity:0;transform:translateY(14px);animation:rise .7s var(--ease) forwards;}
+  .reveal{animation-delay:var(--d,0s);}
+  @keyframes rise{to{opacity:1;transform:none;}}
 
-h1{
-margin-top:22px;
-font-size:30px;
-font-weight:800;
-line-height:1.2;
-letter-spacing:.5px;
-color:#F2F3F4;
-}
+  @media (max-width:420px){
+    .card{padding:30px 18px 24px;}
+    .avatar-ring{width:112px;height:112px;}
+    h1{font-size:22px;}
+  }
 
-.subtitle{
-margin-top:12px;
-font-size:15px;
-color:#DED1C6;
-}
-
-.status{
-margin-top:12px;
-font-size:14px;
-font-weight:600;
-color:#DED1C6;
-}
-
-.links{
-margin-top:30px;
-display:flex;
-flex-direction:column;
-gap:16px;
-}
-
-.link{
-
-display:flex;
-align-items:center;
-justify-content:center;
-gap:12px;
-
-padding:18px;
-
-text-decoration:none;
-
-background:
-linear-gradient(
-135deg,
-#174871,
-#0F2D4D
-);
-
-color:#F2F3F4;
-
-border-radius:18px;
-
-font-weight:600;
-
-border:
-1px solid rgba(242,243,244,.08);
-
-transition:.35s;
-}
-
-.link:hover{
-
-transform:
-translateY(-4px);
-
-background:
-linear-gradient(
-135deg,
-#A77693,
-#174871
-);
-
-box-shadow:
-0 0 20px rgba(167,118,147,.45),
-0 0 40px rgba(23,72,113,.35);
-}
-
-.link i{
-font-size:20px;
-}
-
-.footer{
-margin-top:25px;
-font-size:13px;
-color:#DED1C6;
-opacity:.75;
-}
-
-@media(max-width:500px){
-
-.avatar-ring{
-width:165px;
-height:165px;
-}
-
-h1{
-font-size:24px;
-}
-
-.card{
-padding:25px 18px;
-}
-
-}
-
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important;transition:none !important;}
+    .reveal{opacity:1;transform:none;}
+  }
 </style>
 </head>
-
 <body>
 
-<div class="container">
+  <div class="aurora" aria-hidden="true">
+    <span class="b1"></span>
+    <span class="b2"></span>
+    <span class="b3"></span>
+  </div>
 
-<div class="card">
+  <main class="container">
+    <div class="card">
 
-<div class="avatar-ring">
+      <div class="avatar-ring reveal" style="--d:.05s">
+        <div class="avatar">
+          <img src="profile.jpg" alt="Abdullajon Najimiddinov" id="avatarImg" />
+          <span class="fallback" id="avatarFallback" hidden>AN</span>
+        </div>
+        <span class="live-dot" title="Online" aria-label="Online"></span>
+      </div>
 
-<div class="avatar">
-<img src="profile.jpg" alt="Abdullajon">
-</div>
+      <div class="name-row reveal" style="--d:.15s">
+        <h1>Abdullajon Najimiddinov</h1>
+        <i class="fa-solid fa-circle-check verified" title="Tasdiqlangan" aria-label="Tasdiqlangan"></i>
+      </div>
 
-</div>
+      <p class="subtitle reveal" style="--d:.22s">AI · Dasturlash · Robototexnika</p>
 
-<h1>
-ABDULLAJON<br>
-NAJIMIDDINOV
-</h1>
+      <div class="meta reveal" style="--d:.3s">
+        <span class="chip"><i class="fa-solid fa-location-dot"></i> Mingbuloq, Namangan</span>
+        <span class="chip"><span class="ok">●</span> Hozir onlayn</span>
+      </div>
 
-<div class="subtitle">
-AI • Dasturlash • Robototexnika
-</div>
+      <nav class="links" aria-label="Ijtimoiy havolalar">
+        <a class="link tg reveal" style="--d:.4s" href="https://t.me/najimiddinov" target="_blank" rel="noopener">
+          <span class="icon"><i class="fa-brands fa-telegram"></i></span>
+          <span class="text"><span class="t">Telegram</span><span class="h">@najimiddinov</span></span>
+          <i class="fa-solid fa-arrow-right chev"></i>
+        </a>
 
-<div class="status">
-🟢 Online
-</div>
+        <a class="link ig reveal" style="--d:.48s" href="https://instagram.com/najimiddinov_605" target="_blank" rel="noopener">
+          <span class="icon"><i class="fa-brands fa-instagram"></i></span>
+          <span class="text"><span class="t">Instagram</span><span class="h">@najimiddinov_605</span></span>
+          <i class="fa-solid fa-arrow-right chev"></i>
+        </a>
 
-<div class="links">
+        <a class="link ig reveal" style="--d:.56s" href="https://instagram.com/_najimiddinov_" target="_blank" rel="noopener">
+          <span class="icon"><i class="fa-brands fa-instagram"></i></span>
+          <span class="text"><span class="t">Instagram</span><span class="h">@_najimiddinov_</span></span>
+          <i class="fa-solid fa-arrow-right chev"></i>
+        </a>
 
-<a class="link"
-href="https://t.me/najimiddinov"
-target="_blank">
+        <a class="link gh reveal" style="--d:.64s" href="https://github.com/Najimiddinov" target="_blank" rel="noopener">
+          <span class="icon"><i class="fa-brands fa-github"></i></span>
+          <span class="text"><span class="t">GitHub</span><span class="h">github.com/Najimiddinov</span></span>
+          <i class="fa-solid fa-arrow-right chev"></i>
+        </a>
+      </nav>
 
-<i class="fa-brands fa-telegram"></i>
-Telegram
+      <p class="footer reveal" style="--d:.72s">© 2026 Abdullajon Najimiddinov</p>
+    </div>
+  </main>
 
-</a>
-
-<a class="link"
-href="https://instagram.com/najimiddinov_605"
-target="_blank">
-
-<i class="fa-brands fa-instagram"></i>
-@najimiddinov_605
-
-</a>
-
-<a class="link"
-href="https://instagram.com/_najimiddinov_"
-target="_blank">
-
-<i class="fa-brands fa-instagram"></i>
-@_najimiddinov_
-
-</a>
-
-<a class="link"
-href="https://github.com/Najimiddinov"
-target="_blank">
-
-<i class="fa-brands fa-github"></i>
-GitHub
-
-</a>
-
-</div>
-
-<div class="footer">
-© 2026 Abdullajon Najimiddinov
-</div>
-
-</div>
-
-</div>
-
+  <script>
+    // Rasm topilmasa, initsiallarga oʻtish
+    (function () {
+      var img = document.getElementById('avatarImg');
+      var fb = document.getElementById('avatarFallback');
+      function showFallback(){ img.style.display='none'; fb.hidden=false; }
+      img.addEventListener('error', showFallback);
+      if (img.complete && img.naturalWidth === 0) showFallback();
+    })();
+  </script>
 </body>
 </html>
-```
