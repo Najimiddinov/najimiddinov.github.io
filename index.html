@@ -1,389 +1,1867 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Abdullajon Najimiddinov — AI · Dasturlash · Robototexnika</title>
-<meta name="description" content="Abdullajon Najimiddinov — AI, dasturlash va robototexnika. Telegram, Instagram va GitHub havolalari." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROO_CODER — Professional Dasturiy Ta'minot Ishlab Chiquvchi</title>
 
-<!-- Open Graph (link ulashilganda chiroyli ko'rinishi uchun) -->
-<meta property="og:type" content="profile" />
-<meta property="og:title" content="Abdullajon Najimiddinov" />
-<meta property="og:description" content="AI · Dasturlash · Robototexnika" />
-<meta name="theme-color" content="#0B2440" />
+    <meta name="description" content="PROO_CODER — Android ilovalar, Telegram botlar, Web saytlar, AI avtomatlashtirish va premium dasturiy yechimlar.">
+    <meta name="keywords" content="PROO_CODER, Android, Telegram Bot, Web, AI, Python, Kotlin, Dasturlash, Portfolio">
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <meta property="og:title" content="PROO_CODER — Professional Dasturiy Ta'minot Ishlab Chiquvchi">
+    <meta property="og:description" content="Android ilovalar, Telegram botlar, Web saytlar va AI avtomatlashtirish.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop">
 
-<style>
-  :root{
-    --navy-900:#0B2440;
-    --navy-800:#0F2D4D;
-    --navy-600:#174871;
-    --mauve:#A77693;
-    --sand:#DED1C6;
-    --white:#F2F3F4;
-    --live:#4ADE80;
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.min.css" rel="stylesheet">
 
-    --glass:rgba(242,243,244,.055);
-    --glass-border:rgba(242,243,244,.14);
-    --radius:30px;
+    <style>
+        :root {
+            --bg-void: #050505;
+            --card-void: #111111;
+            --card-border: #262626;
+            --card-border-hover: #444444;
 
-    --ease:cubic-bezier(.22,1,.36,1);
-  }
+            --accent-cosmic: #ff9800;
+            --accent-electric: #ffb300;
+            --accent-neon-pink: #ff9800;
+            --accent-emerald: #ff9800;
 
-  *{margin:0;padding:0;box-sizing:border-box;}
+            --text-primary: #ffffff;
+            --text-secondary: #bdbdbd;
 
-  html,body{height:100%;}
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Manrope', sans-serif;
+        }
 
-  body{
-    font-family:'Inter',system-ui,sans-serif;
-    color:var(--white);
-    background:var(--navy-900);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:28px 18px;
-    overflow-x:hidden;
-    position:relative;
-    -webkit-font-smoothing:antialiased;
-  }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            -webkit-font-smoothing: antialiased;
+        }
 
-  /* ---------- Jonli aurora fon ---------- */
-  .aurora{
-    position:fixed;
-    inset:-30vmax;
-    z-index:-2;
-    filter:blur(60px) saturate(120%);
-    opacity:.9;
-  }
-  .aurora span{
-    position:absolute;
-    border-radius:50%;
-    mix-blend-mode:screen;
-    animation:drift 22s var(--ease) infinite alternate;
-  }
-  .aurora .b1{width:46vmax;height:46vmax;top:2%;right:6%;
-    background:radial-gradient(circle,rgba(167,118,147,.55),transparent 62%);}
-  .aurora .b2{width:50vmax;height:50vmax;bottom:0%;left:2%;
-    background:radial-gradient(circle,rgba(23,72,113,.7),transparent 60%);
-    animation-duration:28s;animation-delay:-6s;}
-  .aurora .b3{width:34vmax;height:34vmax;top:30%;left:32%;
-    background:radial-gradient(circle,rgba(222,209,198,.28),transparent 60%);
-    animation-duration:32s;animation-delay:-12s;}
+        html {
+            scroll-behavior: smooth;
+            background-color: var(--bg-void);
+            overflow-x: hidden;
+        }
 
-  @keyframes drift{
-    from{transform:translate3d(0,0,0) scale(1);}
-    to{transform:translate3d(6vmax,-5vmax,0) scale(1.18);}
-  }
+        body {
+            background-color: var(--bg-void);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            cursor: none;
+        }
 
-  /* Nozik grain teksturasi */
-  body::after{
-    content:"";
-    position:fixed;
-    inset:0;
-    z-index:-1;
-    pointer-events:none;
-    opacity:.05;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-void);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-cosmic);
+        }
 
-  /* ---------- Kartochka ---------- */
-  .container{width:100%;max-width:440px;}
+        ::selection {
+            background: var(--accent-cosmic);
+            color: #fff;
+        }
 
-  .card{
-    position:relative;
-    background:var(--glass);
-    backdrop-filter:blur(26px);
-    -webkit-backdrop-filter:blur(26px);
-    border:1px solid var(--glass-border);
-    border-radius:var(--radius);
-    padding:38px 26px 28px;
-    text-align:center;
-    box-shadow:
-      0 30px 70px -20px rgba(0,0,0,.55),
-      inset 0 1px 0 rgba(255,255,255,.08);
-    overflow:hidden;
-  }
-  /* yuqori chetdagi nozik yorug'lik */
-  .card::before{
-    content:"";
-    position:absolute;
-    top:0;left:50%;
-    transform:translateX(-50%);
-    width:70%;height:1px;
-    background:linear-gradient(90deg,transparent,rgba(222,209,198,.6),transparent);
-  }
+        .noise-grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.02;
+            z-index: 999;
+            pointer-events: none;
+        }
 
-  /* ---------- Avatar ---------- */
-  .avatar-ring{
-    position:relative;
-    width:128px;height:128px;
-    margin:0 auto;
-    padding:4px;
-    border-radius:50%;
-  }
-  .avatar-ring::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    border-radius:50%;
-    padding:3px;
-    background:conic-gradient(from 0deg,var(--sand),var(--mauve),var(--navy-600),var(--sand));
-    -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite:xor;
-            mask-composite:exclude;
-    animation:spin 7s linear infinite;
-  }
-  @keyframes spin{to{transform:rotate(360deg);}}
+        #gravitational-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -2;
+            pointer-events: none;
+        }
 
-  .avatar{
-    position:relative;
-    width:100%;height:100%;
-    border-radius:50%;
-    overflow:hidden;
-    background:linear-gradient(135deg,var(--navy-600),var(--navy-800));
-    display:grid;place-items:center;
-  }
-  .avatar img{width:100%;height:100%;object-fit:cover;display:block;}
-  .avatar .fallback{
-    font-family:'Space Grotesk',sans-serif;
-    font-weight:600;
-    font-size:42px;
-    color:var(--sand);
-    letter-spacing:1px;
-  }
+        .aurora-mesh {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 900px;
+            height: 900px;
+            background: radial-gradient(circle, rgba(255, 152, 0, 0.12) 0%, rgba(255, 179, 0, 0.06) 40%, transparent 70%);
+            filter: blur(130px);
+            z-index: -1;
+            pointer-events: none;
+            animation: orbit-aurora 25s infinite alternate ease-in-out;
+        }
 
-  .live-dot{
-    position:absolute;
-    bottom:8px;right:8px;
-    width:20px;height:20px;
-    border-radius:50%;
-    background:var(--live);
-    border:3px solid var(--navy-800);
-    box-shadow:0 0 0 0 rgba(74,222,128,.55);
-    animation:pulse 2.4s var(--ease) infinite;
-  }
-  @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(74,222,128,.5);}
-    70%{box-shadow:0 0 0 12px rgba(74,222,128,0);}
-    100%{box-shadow:0 0 0 0 rgba(74,222,128,0);}
-  }
+        @keyframes orbit-aurora {
+            0% {
+                transform: translate(-50%, -50%) scale(0.9) rotate(0deg);
+            }
+            100% {
+                transform: translate(-40%, -60%) scale(1.1) rotate(180deg);
+            }
+        }
 
-  /* ---------- Matn ---------- */
-  .name-row{
-    margin-top:20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-  }
-  h1{
-    font-family:'Space Grotesk',sans-serif;
-    font-size:25px;
-    font-weight:700;
-    letter-spacing:.2px;
-    line-height:1.1;
-  }
-  .verified{
-    color:var(--mauve);
-    font-size:19px;
-    line-height:1;
-    flex-shrink:0;
-  }
+        .gravity-cursor {
+            position: fixed;
+            width: 32px;
+            height: 32px;
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s, background-color 0.3s, border-color 0.3s;
+        }
 
-  .subtitle{
-    margin-top:10px;
-    font-size:14px;
-    font-weight:500;
-    color:var(--sand);
-    letter-spacing:.3px;
-  }
+        .gravity-cursor-dot {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background-color: var(--accent-electric);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10001;
+            transform: translate(-50%, -50%);
+        }
 
-  .meta{
-    margin-top:14px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    flex-wrap:wrap;
-  }
-  .chip{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    padding:6px 12px;
-    font-size:12px;
-    font-weight:500;
-    color:var(--sand);
-    background:rgba(242,243,244,.06);
-    border:1px solid rgba(242,243,244,.1);
-    border-radius:999px;
-  }
-  .chip .ok{color:var(--live);}
+        .interactive-preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-void);
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), visibility 1s;
+        }
 
-  /* ---------- Havolalar ---------- */
-  .links{
-    margin-top:26px;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-  }
-  .link{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    padding:13px 16px;
-    text-decoration:none;
-    color:var(--white);
-    background:rgba(242,243,244,.04);
-    border:1px solid rgba(242,243,244,.09);
-    border-radius:16px;
-    transition:transform .35s var(--ease),
-               background .35s var(--ease),
-               border-color .35s var(--ease),
-               box-shadow .35s var(--ease);
-  }
-  .link .icon{
-    flex-shrink:0;
-    width:42px;height:42px;
-    display:grid;place-items:center;
-    border-radius:12px;
-    font-size:18px;
-    background:linear-gradient(135deg,var(--navy-600),var(--navy-800));
-    border:1px solid rgba(242,243,244,.08);
-    transition:transform .35s var(--ease);
-  }
-  .link .text{flex:1;text-align:left;min-width:0;}
-  .link .text .t{font-size:14px;font-weight:600;}
-  .link .text .h{
-    font-size:12px;color:var(--sand);
-    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-  }
-  .link .chev{
-    color:var(--sand);font-size:13px;
-    transition:transform .35s var(--ease),color .35s var(--ease);
-  }
+        .interactive-preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
 
-  .link:hover,.link:focus-visible{
-    transform:translateY(-3px);
-    background:rgba(167,118,147,.14);
-    border-color:rgba(167,118,147,.4);
-    box-shadow:0 14px 30px -12px rgba(167,118,147,.5);
-    outline:none;
-  }
-  .link:hover .icon,.link:focus-visible .icon{
-    transform:scale(1.06) rotate(-3deg);
-  }
-  .link:hover .chev,.link:focus-visible .chev{
-    transform:translateX(4px);
-    color:var(--white);
-  }
-  .link:focus-visible{box-shadow:0 0 0 3px rgba(222,209,198,.55);}
+        .preloader-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
 
-  /* brand ranglar */
-  .link.tg .icon{background:linear-gradient(135deg,#229ED9,#1c7eb0);}
-  .link.ig .icon{background:linear-gradient(135deg,#C13584,#E1306C,#F77737);}
-  .link.gh .icon{background:linear-gradient(135deg,#2b3340,#171a21);}
+        .preloader-logo svg {
+            width: 80px;
+            height: 80px;
+            animation: pulse-glow 2s cubic-bezier(0.85, 0, 0.15, 1) infinite alternate;
+        }
 
-  /* ---------- Footer ---------- */
-  .footer{
-    margin-top:24px;
-    font-size:12px;
-    color:var(--sand);
-    opacity:.65;
-    letter-spacing:.3px;
-  }
+        @keyframes pulse-glow {
+            0% {
+                filter: drop-shadow(0 0 10px rgba(255, 152, 0, 0.2));
+                transform: scale(0.95);
+            }
+            100% {
+                filter: drop-shadow(0 0 40px rgba(255, 152, 0, 0.6));
+                transform: scale(1.05);
+            }
+        }
 
-  /* ---------- Kirish animatsiyasi ---------- */
-  .reveal{opacity:0;transform:translateY(14px);animation:rise .7s var(--ease) forwards;}
-  .reveal{animation-delay:var(--d,0s);}
-  @keyframes rise{to{opacity:1;transform:none;}}
+        .preloader-text {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: 2px;
+        }
 
-  @media (max-width:420px){
-    .card{padding:30px 18px 24px;}
-    .avatar-ring{width:112px;height:112px;}
-    h1{font-size:22px;}
-  }
+        .preloader-text span {
+            color: var(--accent-cosmic);
+        }
 
-  @media (prefers-reduced-motion:reduce){
-    *{animation:none !important;transition:none !important;}
-    .reveal{opacity:1;transform:none;}
-  }
-</style>
+        .scroll-progress-line {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-cosmic), var(--accent-electric), var(--accent-neon-pink));
+            z-index: 9999;
+            width: 0%;
+        }
+
+        .wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+
+        @media(max-width: 768px) {
+            .wrapper {
+                padding: 0 24px;
+            }
+            body {
+                cursor: default;
+            }
+            .gravity-cursor,
+            .gravity-cursor-dot {
+                display: none;
+            }
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 0;
+            z-index: 900;
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+            background: rgba(5, 5, 5, 0.6);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-id {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-id svg {
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+        }
+
+        .brand-id span {
+            color: var(--accent-cosmic);
+        }
+
+        .nav-items {
+            display: flex;
+            gap: 40px;
+        }
+
+        @media (max-width: 900px) {
+            .nav-items {
+                display: none;
+            }
+        }
+
+        .nav-item {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .nav-item:hover {
+            color: #fff;
+        }
+
+        .section-header {
+            margin-bottom: 80px;
+        }
+
+        .section-lbl {
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-electric);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .section-heading {
+            font-family: var(--font-display);
+            font-size: clamp(2.6rem, 5vw, 4.2rem);
+            font-weight: 700;
+            line-height: 1.05;
+            letter-spacing: -2px;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 160px;
+            padding-bottom: 100px;
+            position: relative;
+        }
+
+        .hero-split {
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        @media (max-width: 968px) {
+            .hero-split {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+        }
+
+        .hero-intro h1 {
+            font-family: var(--font-display);
+            font-size: clamp(3.2rem, 7vw, 6.2rem);
+            font-weight: 700;
+            line-height: 0.98;
+            letter-spacing: -3px;
+            margin-bottom: 30px;
+        }
+
+        .hero-intro h1 span {
+            color: var(--accent-cosmic);
+        }
+
+        .carousel-roles {
+            font-family: var(--font-display);
+            font-size: clamp(1.2rem, 2.8vw, 2rem);
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            height: 48px;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 80px;
+            flex-wrap: wrap;
+        }
+
+        .magnetic-btn {
+            padding: 18px 36px;
+            border-radius: 14px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-cosmic {
+            background: var(--accent-cosmic);
+            color: #050505;
+        }
+
+        .btn-cosmic:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(255, 152, 0, 0.25);
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid var(--card-border);
+            color: #fff;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .metrics-panel {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            border-top: 1px solid var(--card-border);
+            padding-top: 48px;
+        }
+
+        @media (max-width: 600px) {
+            .metrics-panel {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        .metric-card h3 {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 4vw, 3.4rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1;
+        }
+
+        .metric-card h3 span {
+            color: var(--accent-cosmic);
+        }
+
+        .metric-card p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-profile-area {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .monolith-frame {
+            position: relative;
+            width: 340px;
+            height: 420px;
+            border-radius: 48px;
+            padding: 10px;
+            background: linear-gradient(135deg, var(--card-border) 0%, rgba(255, 255, 255, 0.01) 100%);
+            border: 1px solid var(--card-border);
+            perspective: 1200px;
+            transition: border-color 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .monolith-frame:hover {
+            border-color: rgba(255, 152, 0, 0.3);
+        }
+
+        .monolith-inner-logo {
+            width: 100%;
+            height: 100%;
+            border-radius: 38px;
+            overflow: hidden;
+            background: #0a0a0a;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .monolith-inner-logo svg {
+            width: 90%;
+            height: 90%;
+            transform: scale(0.95);
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .monolith-frame:hover .monolith-inner-logo svg {
+            transform: scale(1.05);
+        }
+
+        .spotlight-lens {
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            background: var(--accent-electric);
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.25;
+            pointer-events: none;
+            top: -30px;
+            right: -30px;
+        }
+
+        section {
+            padding: 140px 0;
+            position: relative;
+        }
+
+        .about-split {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 80px;
+        }
+
+        @media (max-width: 900px) {
+            .about-split {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+        }
+
+        .about-narrative {
+            font-size: 1.15rem;
+            line-height: 1.75;
+            color: var(--text-secondary);
+        }
+
+        .about-narrative p {
+            margin-bottom: 30px;
+        }
+
+        .about-narrative strong {
+            color: var(--text-primary);
+        }
+
+        .about-values-card {
+            background: var(--card-void);
+            border: 1px solid var(--card-border);
+            border-radius: 32px;
+            padding: 48px;
+            height: fit-content;
+            backdrop-filter: blur(20px);
+        }
+
+        .about-values-card h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .about-values-card h3 span {
+            color: var(--accent-cosmic);
+        }
+
+        .about-values-card p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.65;
+        }
+
+        .about-values-card .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .about-values-card .tag-list span {
+            background: rgba(255, 152, 0, 0.08);
+            color: var(--accent-cosmic);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-family: var(--font-display);
+            border: 1px solid rgba(255, 152, 0, 0.1);
+        }
+
+        .skills-collection {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .interactive-skill-node {
+            background: var(--card-void);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 30px;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .interactive-skill-node:hover {
+            border-color: var(--card-border-hover);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+        }
+
+        .node-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .node-icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: rgba(255, 152, 0, 0.08);
+            border: 1px solid rgba(255, 152, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: var(--accent-cosmic);
+        }
+
+        .node-rating {
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            color: var(--accent-electric);
+        }
+
+        .interactive-skill-node h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+
+        .progress-track {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-filler {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-cosmic), var(--accent-electric));
+            width: 0%;
+            border-radius: 2px;
+            transition: width 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .filter-deck {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .pill-btn {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            padding: 12px 24px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.4s;
+        }
+
+        .pill-btn.active,
+        .pill-btn:hover {
+            background: var(--accent-cosmic);
+            color: #050505;
+            border-color: var(--accent-cosmic);
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 40px;
+        }
+
+        @media (max-width: 500px) {
+            .works-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .project-deck-card {
+            background: var(--card-void);
+            border: 1px solid var(--card-border);
+            border-radius: 36px;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .project-deck-card:hover {
+            border-color: rgba(255, 152, 0, 0.25);
+            transform: translateY(-8px);
+        }
+
+        .project-media-frame {
+            height: 260px;
+            overflow: hidden;
+            position: relative;
+            background: #0a0a0a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-media-frame .project-icon {
+            font-size: 4rem;
+            color: var(--accent-cosmic);
+            opacity: 0.6;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s;
+        }
+
+        .project-deck-card:hover .project-media-frame .project-icon {
+            transform: scale(1.15);
+            opacity: 1;
+        }
+
+        .project-media-frame .project-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-cosmic);
+            color: #050505;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-family: var(--font-display);
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-details-panel {
+            padding: 36px;
+        }
+
+        .project-category-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .project-category-tag {
+            font-family: var(--font-display);
+            font-size: 0.7rem;
+            color: var(--accent-electric);
+            background: rgba(255, 179, 0, 0.06);
+            padding: 5px 12px;
+            border-radius: 6px;
+        }
+
+        .project-details-panel h3 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            margin-bottom: 14px;
+            color: #fff;
+        }
+
+        .project-details-panel p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .project-action-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .project-action-btn {
+            font-size: 0.85rem;
+            color: #fff;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0.8;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .project-action-btn:hover {
+            opacity: 1;
+            transform: translateX(3px);
+        }
+
+        .services-collection {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .services-node-card {
+            background: var(--card-void);
+            border: 1px solid var(--card-border);
+            border-radius: 32px;
+            padding: 44px;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .services-node-card:hover {
+            border-color: rgba(255, 152, 0, 0.2);
+            transform: translateY(-6px);
+        }
+
+        .services-node-icon {
+            font-size: 2.2rem;
+            color: var(--accent-electric);
+            margin-bottom: 30px;
+        }
+
+        .services-node-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+
+        .services-node-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        .infinite-marquee-rack {
+            position: relative;
+            width: 100vw;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            overflow: hidden;
+            padding: 60px 0;
+            background: rgba(255, 255, 255, 0.005);
+            border-top: 1px solid var(--card-border);
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .marquee-rail {
+            display: flex;
+            width: max-content;
+            animation: rail-scroll-left 25s linear infinite;
+        }
+
+        .marquee-rail-reverse {
+            display: flex;
+            width: max-content;
+            animation: rail-scroll-right 25s linear infinite;
+            margin-top: 30px;
+        }
+
+        .marquee-segment {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.06);
+            padding: 0 50px;
+            text-transform: uppercase;
+        }
+
+        .marquee-segment i {
+            font-size: 3rem;
+            color: rgba(255, 152, 0, 0.1);
+        }
+
+        @keyframes rail-scroll-left {
+            to {
+                transform: translate3d(-50%, 0, 0);
+            }
+        }
+
+        @keyframes rail-scroll-right {
+            from {
+                transform: translate3d(-50%, 0, 0);
+            }
+            to {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        /* ============================================ */
+        /* NEW CONTACT SECTION STYLES                    */
+        /* ============================================ */
+        .contact-intro {
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            max-width: 650px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 24px;
+            margin-top: 10px;
+        }
+
+        .contact-card,
+        .contact-card-link {
+            background: var(--card-void);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 30px 24px;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: #fff;
+        }
+
+        .contact-card-link:hover,
+        .contact-card:hover {
+            border-color: rgba(255, 152, 0, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: rgba(255, 152, 0, 0.08);
+            border: 1px solid rgba(255, 152, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--accent-cosmic);
+            flex-shrink: 0;
+        }
+
+        .contact-content h4 {
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-content p {
+            font-size: 1.05rem;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .contact-card-link .contact-content p {
+            color: var(--accent-cosmic);
+        }
+
+        .contact-card-link:hover .contact-content p {
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* ============================================ */
+
+        footer {
+            border-top: 1px solid var(--card-border);
+            padding: 80px 0;
+            background: rgba(5, 5, 5, 0.9);
+            position: relative;
+        }
+
+        .footer-split-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .footer-brand svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .footer-brand span {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .footer-brand span em {
+            color: var(--accent-cosmic);
+            font-style: normal;
+        }
+
+        .footer-copyright-note {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-tagline {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            letter-spacing: 2px;
+        }
+
+        .footer-tagline span {
+            color: var(--accent-cosmic);
+        }
+
+        .totop-trigger {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--card-void);
+            border: 1px solid var(--card-border);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.4s;
+        }
+
+        .totop-trigger:hover {
+            background: var(--accent-cosmic);
+            color: #050505;
+            border-color: var(--accent-cosmic);
+        }
+
+        .fade-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1), transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 600px) {
+            .footer-split-row {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-brand {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <div class="aurora" aria-hidden="true">
-    <span class="b1"></span>
-    <span class="b2"></span>
-    <span class="b3"></span>
-  </div>
+    <div class="noise-grain"></div>
+    <div class="aurora-mesh"></div>
+    <canvas id="gravitational-canvas"></canvas>
 
-  <main class="container">
-    <div class="card">
+    <div class="scroll-progress-line" id="progressLine"></div>
 
-      <div class="avatar-ring reveal" style="--d:.05s">
-        <div class="avatar">
-          <img src="profile.jpg" alt="Abdullajon Najimiddinov" id="avatarImg" />
-          <span class="fallback" id="avatarFallback" hidden>AN</span>
+    <div class="gravity-cursor" id="gravityCursor"></div>
+    <div class="gravity-cursor-dot" id="gravityCursorDot"></div>
+
+    <div class="interactive-preloader" id="preloaderOverlay">
+        <div class="preloader-logo">
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="90" stroke="#ff9800" stroke-width="3" stroke-dasharray="8 8" opacity="0.3"/>
+                <circle cx="100" cy="100" r="82" stroke="#ff9800" stroke-width="1.5" opacity="0.6"/>
+                <rect x="30" y="50" width="140" height="80" rx="12" stroke="#ff9800" stroke-width="2" fill="none" opacity="0.8"/>
+                <circle cx="52" cy="68" r="5" fill="#ff5722"/>
+                <circle cx="72" cy="68" r="5" fill="#ffc107"/>
+                <circle cx="92" cy="68" r="5" fill="#4caf50"/>
+                <text x="100" y="110" font-family="'Space Grotesk', sans-serif" font-size="32" font-weight="700" fill="#ff9800" text-anchor="middle" letter-spacing="1">/ &gt;</text>
+                <circle cx="160" cy="50" r="22" stroke="#ff9800" stroke-width="3" fill="none" opacity="0.7"/>
+                <circle cx="160" cy="50" r="12" stroke="#ff9800" stroke-width="2" fill="none" opacity="0.4"/>
+            </svg>
+            <div class="preloader-text">PROO<span>_</span>CODER</div>
         </div>
-        <span class="live-dot" title="Online" aria-label="Online"></span>
-      </div>
-
-      <div class="name-row reveal" style="--d:.15s">
-        <h1>Abdullajon Najimiddinov</h1>
-        <i class="fa-solid fa-circle-check verified" title="Tasdiqlangan" aria-label="Tasdiqlangan"></i>
-      </div>
-
-      <p class="subtitle reveal" style="--d:.22s">AI · Dasturlash · Robototexnika</p>
-
-      <div class="meta reveal" style="--d:.3s">
-        <span class="chip"><i class="fa-solid fa-location-dot"></i> Mingbuloq, Namangan</span>
-        <span class="chip"><span class="ok">●</span> Hozir onlayn</span>
-      </div>
-
-      <nav class="links" aria-label="Ijtimoiy havolalar">
-        <a class="link tg reveal" style="--d:.4s" href="https://t.me/najimiddinov" target="_blank" rel="noopener">
-          <span class="icon"><i class="fa-brands fa-telegram"></i></span>
-          <span class="text"><span class="t">Telegram</span><span class="h">@najimiddinov</span></span>
-          <i class="fa-solid fa-arrow-right chev"></i>
-        </a>
-
-        <a class="link ig reveal" style="--d:.48s" href="https://instagram.com/najimiddinov_605" target="_blank" rel="noopener">
-          <span class="icon"><i class="fa-brands fa-instagram"></i></span>
-          <span class="text"><span class="t">Instagram</span><span class="h">@najimiddinov_605</span></span>
-          <i class="fa-solid fa-arrow-right chev"></i>
-        </a>
-
-        <a class="link ig reveal" style="--d:.56s" href="https://instagram.com/_najimiddinov_" target="_blank" rel="noopener">
-          <span class="icon"><i class="fa-brands fa-instagram"></i></span>
-          <span class="text"><span class="t">Instagram</span><span class="h">@_najimiddinov_</span></span>
-          <i class="fa-solid fa-arrow-right chev"></i>
-        </a>
-
-        <a class="link gh reveal" style="--d:.64s" href="https://github.com/Najimiddinov" target="_blank" rel="noopener">
-          <span class="icon"><i class="fa-brands fa-github"></i></span>
-          <span class="text"><span class="t">GitHub</span><span class="h">github.com/Najimiddinov</span></span>
-          <i class="fa-solid fa-arrow-right chev"></i>
-        </a>
-      </nav>
-
-      <p class="footer reveal" style="--d:.72s">© 2026 Abdullajon Najimiddinov</p>
     </div>
-  </main>
 
-  <script>
-    // Rasm topilmasa, initsiallarga oʻtish
-    (function () {
-      var img = document.getElementById('avatarImg');
-      var fb = document.getElementById('avatarFallback');
-      function showFallback(){ img.style.display='none'; fb.hidden=false; }
-      img.addEventListener('error', showFallback);
-      if (img.complete && img.naturalWidth === 0) showFallback();
-    })();
-  </script>
+    <header>
+        <div class="wrapper nav-wrapper">
+            <a href="#" class="brand-id">
+                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="90" stroke="#ff9800" stroke-width="2" stroke-dasharray="6 6" opacity="0.3"/>
+                    <circle cx="100" cy="100" r="82" stroke="#ff9800" stroke-width="1" opacity="0.5"/>
+                    <rect x="30" y="50" width="140" height="80" rx="10" stroke="#ff9800" stroke-width="1.5" fill="none" opacity="0.7"/>
+                    <circle cx="50" cy="66" r="4" fill="#ff5722"/>
+                    <circle cx="68" cy="66" r="4" fill="#ffc107"/>
+                    <circle cx="86" cy="66" r="4" fill="#4caf50"/>
+                    <text x="100" y="107" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="700" fill="#ff9800" text-anchor="middle" letter-spacing="0.5">/ &gt;</text>
+                    <circle cx="158" cy="52" r="18" stroke="#ff9800" stroke-width="2.5" fill="none" opacity="0.6"/>
+                    <circle cx="158" cy="52" r="9" stroke="#ff9800" stroke-width="1.5" fill="none" opacity="0.3"/>
+                </svg>
+                <span>PROO_CODER</span>
+            </a>
+            <div class="nav-items">
+                <a href="#about" class="nav-item">Bosh sahifa</a>
+                <a href="#about" class="nav-item">Men haqimda</a>
+                <a href="#skills" class="nav-item">Texnologiyalar</a>
+                <a href="#projects" class="nav-item">Loyihalar</a>
+                <a href="#services" class="nav-item">Xizmatlar</a>
+                <a href="https://t.me/najimiddinov" target="_blank" class="nav-item">Bog'lanish</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="wrapper hero-split">
+            <div class="hero-intro">
+                <h1><span>PROO_CODER</span></h1>
+                <div class="carousel-roles" id="carouselRoles"></div>
+                <p class="hero-desc">
+                    Android ilovalar, Telegram botlar, Web saytlar, AI avtomatlashtirish, Desktop dasturlar va premium dasturiy yechimlarni ishlab chiqaman.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="magnetic-btn btn-cosmic" data-influence="0.25">Loyihalarim <i class="ri-arrow-right-up-line"></i></a>
+                    <a href="https://t.me/najimiddinov" target="_blank" class="magnetic-btn btn-outline" data-influence="0.3">Bog'lanish</a>
+                </div>
+                <div class="metrics-panel">
+                    <div class="metric-card">
+                        <h3 class="counter-node" data-stop="20">0<span>+</span></h3>
+                        <p>Loyihalar</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3 class="counter-node" data-stop="25">0<span>+</span></h3>
+                        <p>Texnologiyalar</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3 class="counter-node" data-stop="3">0<span>+</span></h3>
+                        <p>Tajriba Yil</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3 class="counter-node" data-stop="15">0<span>+</span></h3>
+                        <p>Mijozlar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-profile-area">
+                <div class="monolith-frame" id="monolithFrame">
+                    <div class="monolith-inner-logo">
+                        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="92" stroke="#ff9800" stroke-width="2.5" stroke-dasharray="8 8" opacity="0.3"/>
+                            <circle cx="100" cy="100" r="84" stroke="#ff9800" stroke-width="1.5" opacity="0.5"/>
+                            <rect x="28" y="48" width="144" height="84" rx="14" stroke="#ff9800" stroke-width="2" fill="none" opacity="0.7"/>
+                            <circle cx="50" cy="66" r="5" fill="#ff5722"/>
+                            <circle cx="70" cy="66" r="5" fill="#ffc107"/>
+                            <circle cx="90" cy="66" r="5" fill="#4caf50"/>
+                            <text x="100" y="110" font-family="'Space Grotesk', sans-serif" font-size="34" font-weight="700" fill="#ff9800" text-anchor="middle" letter-spacing="1">/ &gt;</text>
+                            <circle cx="160" cy="50" r="22" stroke="#ff9800" stroke-width="3" fill="none" opacity="0.6"/>
+                            <circle cx="160" cy="50" r="12" stroke="#ff9800" stroke-width="2" fill="none" opacity="0.3"/>
+                            <circle cx="100" cy="172" r="6" fill="#ff9800" opacity="0.4"/>
+                            <circle cx="100" cy="172" r="3" fill="#ff9800" opacity="0.7"/>
+                        </svg>
+                    </div>
+                    <div class="spotlight-lens"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="fade-reveal">
+        <div class="wrapper">
+            <div class="section-header">
+                <span class="section-lbl">Men haqimda</span>
+                <h2 class="section-heading">PROO_CODER —<br>Professional Dasturiy Ta'minot Ishlab Chiquvchi</h2>
+            </div>
+            <div class="about-split">
+                <div class="about-narrative">
+                    <p><strong>PROO_CODER</strong> — zamonaviy dasturiy mahsulotlar ishlab chiqaruvchi shaxsiy brend. Android ilovalar, Telegram botlar, Web saytlar, AI avtomatlashtirish va desktop dasturlar sohasida yuqori sifatli yechimlar taqdim etaman.</p>
+                    <p>Har bir loyiha zamonaviy texnologiyalar, premium dizayn va yuqori sifat asosida ishlab chiqiladi. Mening maqsadim — mijozlar uchun eng yaxshi dasturiy tajribani yaratish.</p>
+                    <p><strong>Asosiy yo'nalishlar:</strong> Dasturlash, Android APK, Web saytlar, Telegram botlar, Blender va Montaj, Sun'iy Intellekt.</p>
+                </div>
+                <div class="about-values-card">
+                    <h3>🚀 <span>Brend</span> Falsafasi</h3>
+                    <p>Har bir loyiha — bu yangi bosqich. Men sifat, innovatsiya va professional yondashuvni birlashtirib, foydalanuvchilar uchun qulay va samarali dasturiy yechimlar yarataman.</p>
+                    <div class="tag-list">
+                        <span>Android</span>
+                        <span>Web</span>
+                        <span>Telegram Bot</span>
+                        <span>AI</span>
+                        <span>Blender</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="fade-reveal">
+        <div class="wrapper">
+            <div class="section-header">
+                <span class="section-lbl">Texnologiyalar</span>
+                <h2 class="section-heading">Mening Arsenalim</h2>
+            </div>
+            <div class="skills-collection">
+                <div class="interactive-skill-node">
+                    <div class="node-top">
+                        <div class="node-icon-box"><i class="ri-code-s-slash-line"></i></div>
+                        <span class="node-rating">Expert</span>
+                    </div>
+                    <h3>Python</h3>
+                    <div class="progress-track"><div class="progress-filler" data-fill="95%"></div></div>
+                </div>
+                <div class="interactive-skill-node">
+                    <div class="node-top">
+                        <div class="node-icon-box"><i class="ri-instance-line"></i></div>
+                        <span class="node-rating">Advanced</span>
+                    </div>
+                    <h3>Kotlin</h3>
+                    <div class="progress-track"><div class="progress-filler" data-fill="92%"></div></div>
+                </div>
+                <div class="interactive-skill-node">
+                    <div class="node-top">
+                        <div class="node-icon-box"><i class="ri-android-line"></i></div>
+                        <span class="node-rating">Advanced</span>
+                    </div>
+                    <h3>Jetpack Compose</h3>
+                    <div class="progress-track"><div class="progress-filler" data-fill="88%"></div></div>
+                </div>
+                <div class="interactive-skill-node">
+                    <div class="node-top">
+                        <div class="node-icon-box"><i class="ri-smartphone-line"></i></div>
+                        <span class="node-rating">Advanced</span>
+                    </div>
+                    <h3>Android</h3>
+                    <div class="progress-track"><div class="progress-filler" data-fill="90%"></div></div>
+                </div>
+                <div class="interactive-skill-node">
+                    <div class="node-top">
+                        <div class="node-icon-box"><i class="ri-message-3-line"></i></div>
+                        <span class="node-rating">Advanced</span>
+                    </div>
+                    <h3>Telegram Bot</h3>
+                    <div class="progress-track"><div class="progress-filler" data-fill="85%"></div></div>
+                </div>
+                <div class="interactive-skill-node">
+                    <div class="node-top">
+                        <div class="node-icon-box"><i class="ri-database-2-line"></i></div>
+                        <span class="node-rating">Intermediate</span>
+                    </div>
+                    <h3>PostgreSQL</h3>
+                    <div class="progress-track"><div class="progress-filler" data-fill="80%"></div></div>
+                </div>
+                <div class="interactive-skill-node">
+                    <div class="node-top">
+                        <div class="node-icon-box"><i class="ri-box-3-line"></i></div>
+                        <span class="node-rating">Intermediate</span>
+                    </div>
+                    <h3>Docker</h3>
+                    <div class="progress-track"><div class="progress-filler" data-fill="78%"></div></div>
+                </div>
+                <div class="interactive-skill-node">
+                    <div class="node-top">
+                        <div class="node-icon-box"><i class="ri-reactjs-line"></i></div>
+                        <span class="node-rating">Intermediate</span>
+                    </div>
+                    <h3>React</h3>
+                    <div class="progress-track"><div class="progress-filler" data-fill="82%"></div></div>
+                </div>
+                <div class="interactive-skill-node">
+                    <div class="node-top">
+                        <div class="node-icon-box"><i class="ri-brain-line"></i></div>
+                        <span class="node-rating">Intermediate</span>
+                    </div>
+                    <h3>AI</h3>
+                    <div class="progress-track"><div class="progress-filler" data-fill="75%"></div></div>
+                </div>
+                <div class="interactive-skill-node">
+                    <div class="node-top">
+                        <div class="node-icon-box"><i class="ri-movie-line"></i></div>
+                        <span class="node-rating">Intermediate</span>
+                    </div>
+                    <h3>Blender</h3>
+                    <div class="progress-track"><div class="progress-filler" data-fill="70%"></div></div>
+                </div>
+                <div class="interactive-skill-node">
+                    <div class="node-top">
+                        <div class="node-icon-box"><i class="ri-video-edit-line"></i></div>
+                        <span class="node-rating">Intermediate</span>
+                    </div>
+                    <h3>Video Montaj</h3>
+                    <div class="progress-track"><div class="progress-filler" data-fill="72%"></div></div>
+                </div>
+                <div class="interactive-skill-node">
+                    <div class="node-top">
+                        <div class="node-icon-box"><i class="ri-html5-line"></i></div>
+                        <span class="node-rating">Advanced</span>
+                    </div>
+                    <h3>HTML & CSS</h3>
+                    <div class="progress-track"><div class="progress-filler" data-fill="90%"></div></div>
+                </div>
+                <div class="interactive-skill-node">
+                    <div class="node-top">
+                        <div class="node-icon-box"><i class="ri-javascript-line"></i></div>
+                        <span class="node-rating">Advanced</span>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <div class="progress-track"><div class="progress-filler" data-fill="85%"></div></div>
+                </div>
+                <div class="interactive-skill-node">
+                    <div class="node-top">
+                        <div class="node-icon-box"><i class="ri-git-branch-line"></i></div>
+                        <span class="node-rating">Advanced</span>
+                    </div>
+                    <h3>Git & GitHub</h3>
+                    <div class="progress-track"><div class="progress-filler" data-fill="88%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="fade-reveal">
+        <div class="wrapper">
+            <div class="section-header">
+                <span class="section-lbl">Loyihalar</span>
+                <h2 class="section-heading">Mening Portfoliom</h2>
+            </div>
+            <div class="filter-deck">
+                <button class="pill-btn active" data-filter="all">Barchasi</button>
+                <button class="pill-btn" data-filter="android">Android</button>
+                <button class="pill-btn" data-filter="telegram">Telegram Bot</button>
+                <button class="pill-btn" data-filter="web">Web</button>
+                <button class="pill-btn" data-filter="ai">AI</button>
+            </div>
+            <div class="works-grid">
+                <div class="project-deck-card" data-cat="android">
+                    <div class="project-media-frame">
+                        <span class="project-badge">Android</span>
+                        <i class="ri-shopping-cart-2-line project-icon"></i>
+                    </div>
+                    <div class="project-details-panel">
+                        <div class="project-category-tags">
+                            <span class="project-category-tag">Kotlin</span>
+                            <span class="project-category-tag">Jetpack Compose</span>
+                        </div>
+                        <h3>FastFood Premium POS</h3>
+                        <p>Restoran va kafe boshqaruvi uchun premium mobil tizim. Buyurtmalar, inventar va hisobotlar.</p>
+                        <div class="project-action-links">
+                            <a href="#" class="project-action-btn">GitHub <i class="ri-github-line"></i></a>
+                            <a href="#" class="project-action-btn">Batafsil <i class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-deck-card" data-cat="telegram">
+                    <div class="project-media-frame">
+                        <span class="project-badge">Telegram</span>
+                        <i class="ri-message-3-line project-icon"></i>
+                    </div>
+                    <div class="project-details-panel">
+                        <div class="project-category-tags">
+                            <span class="project-category-tag">Python</span>
+                            <span class="project-category-tag">Aiogram</span>
+                        </div>
+                        <h3>FARMBOT</h3>
+                        <p>Telegram fermer xo'jaligi boshqaruvi boti. Ekinlar, hosil va narxlarni kuzatish.</p>
+                        <div class="project-action-links">
+                            <a href="#" class="project-action-btn">GitHub <i class="ri-github-line"></i></a>
+                            <a href="#" class="project-action-btn">Bot <i class="ri-telegram-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-deck-card" data-cat="android">
+                    <div class="project-media-frame">
+                        <span class="project-badge">Android</span>
+                        <i class="ri-file-list-3-line project-icon"></i>
+                    </div>
+                    <div class="project-details-panel">
+                        <div class="project-category-tags">
+                            <span class="project-category-tag">Kotlin</span>
+                            <span class="project-category-tag">Compose</span>
+                        </div>
+                        <h3>NoteFlow</h3>
+                        <p>Android uchun zamonaviy eslatma va ro'yxat ilovasi. Oflayn va sinxronizatsiya.</p>
+                        <div class="project-action-links">
+                            <a href="#" class="project-action-btn">GitHub <i class="ri-github-line"></i></a>
+                            <a href="#" class="project-action-btn">Batafsil <i class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-deck-card" data-cat="web">
+                    <div class="project-media-frame">
+                        <span class="project-badge">Web</span>
+                        <i class="ri-earth-line project-icon"></i>
+                    </div>
+                    <div class="project-details-panel">
+                        <div class="project-category-tags">
+                            <span class="project-category-tag">React</span>
+                            <span class="project-category-tag">CSS</span>
+                        </div>
+                        <h3>Portfolio Website</h3>
+                        <p>Premium shaxsiy portfolio veb-sayt. Zamonaviy dizayn va interaktiv elementlar.</p>
+                        <div class="project-action-links">
+                            <a href="#" class="project-action-btn">GitHub <i class="ri-github-line"></i></a>
+                            <a href="#" class="project-action-btn">Live <i class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-deck-card" data-cat="telegram">
+                    <div class="project-media-frame">
+                        <span class="project-badge">Telegram</span>
+                        <i class="ri-robot-line project-icon"></i>
+                    </div>
+                    <div class="project-details-panel">
+                        <div class="project-category-tags">
+                            <span class="project-category-tag">Python</span>
+                            <span class="project-category-tag">Aiogram</span>
+                        </div>
+                        <h3>Telegram Bots</h3>
+                        <p>Avtomatlashtirilgan biznes jarayonlar uchun Telegram botlar to'plami.</p>
+                        <div class="project-action-links">
+                            <a href="#" class="project-action-btn">GitHub <i class="ri-github-line"></i></a>
+                            <a href="#" class="project-action-btn">Kanal <i class="ri-telegram-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-deck-card" data-cat="ai">
+                    <div class="project-media-frame">
+                        <span class="project-badge">AI</span>
+                        <i class="ri-brain-line project-icon"></i>
+                    </div>
+                    <div class="project-details-panel">
+                        <div class="project-category-tags">
+                            <span class="project-category-tag">Python</span>
+                            <span class="project-category-tag">ML</span>
+                        </div>
+                        <h3>AI Projects</h3>
+                        <p>Sun'iy intellekt va mashinaviy o'rganish asosidagi loyihalar va tajribalar.</p>
+                        <div class="project-action-links">
+                            <a href="#" class="project-action-btn">GitHub <i class="ri-github-line"></i></a>
+                            <a href="#" class="project-action-btn">Batafsil <i class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="fade-reveal">
+        <div class="wrapper">
+            <div class="section-header">
+                <span class="section-lbl">Xizmatlar</span>
+                <h2 class="section-heading">Nimalar Taklif Qilaman</h2>
+            </div>
+            <div class="services-collection">
+                <div class="services-node-card">
+                    <div class="services-node-icon"><i class="ri-android-line"></i></div>
+                    <h3>Android APK</h3>
+                    <p>Kotlin va Jetpack Compose asosida yuqori sifatli Android ilovalarni ishlab chiqish.</p>
+                </div>
+                <div class="services-node-card">
+                    <div class="services-node-icon"><i class="ri-message-3-line"></i></div>
+                    <h3>Telegram Bot</h3>
+                    <p>Biznes jarayonlarni avtomatlashtirish uchun aqlli Telegram botlar yaratish.</p>
+                </div>
+                <div class="services-node-card">
+                    <div class="services-node-icon"><i class="ri-earth-line"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Zamonaviy texnologiyalar asosida tezkor va qulay veb-saytlar va ilovalar.</p>
+                </div>
+                <div class="services-node-card">
+                    <div class="services-node-icon"><i class="ri-computer-line"></i></div>
+                    <h3>Desktop Software</h3>
+                    <p>Windows, macOS va Linux uchun desktop dasturlarni ishlab chiqish.</p>
+                </div>
+                <div class="services-node-card">
+                    <div class="services-node-icon"><i class="ri-brain-line"></i></div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>AI va mashinaviy o'rganish asosidagi aqlli tizimlar va avtomatlashtirish.</p>
+                </div>
+                <div class="services-node-card">
+                    <div class="services-node-icon"><i class="ri-pencil-ruler-2-line"></i></div>
+                    <h3>UI UX Design</h3>
+                    <p>Foydalanuvchi interfeysi va tajribasi dizayni — zamonaviy va intuitiv.</p>
+                </div>
+                <div class="services-node-card">
+                    <div class="services-node-icon"><i class="ri-code-box-line"></i></div>
+                    <h3>API Development</h3>
+                    <p>REST va GraphQL asosida kuchli va xavfsiz API interfeyslarini yaratish.</p>
+                </div>
+                <div class="services-node-card">
+                    <div class="services-node-icon"><i class="ri-database-line"></i></div>
+                    <h3>Database Design</h3>
+                    <p>PostgreSQL va SQL asosida samarali ma'lumotlar bazasi tuzilmasini yaratish.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="infinite-marquee-rack">
+        <div class="marquee-rail">
+            <div class="marquee-segment"><i class="ri-code-line"></i> ANDROID APK</div>
+            <div class="marquee-segment"><i class="ri-message-3-line"></i> TELEGRAM BOT</div>
+            <div class="marquee-segment"><i class="ri-earth-line"></i> WEB SAYTLAR</div>
+            <div class="marquee-segment"><i class="ri-brain-line"></i> SUN'IY INTELLEKT</div>
+            <div class="marquee-segment"><i class="ri-code-line"></i> ANDROID APK</div>
+            <div class="marquee-segment"><i class="ri-message-3-line"></i> TELEGRAM BOT</div>
+            <div class="marquee-segment"><i class="ri-earth-line"></i> WEB SAYTLAR</div>
+            <div class="marquee-segment"><i class="ri-brain-line"></i> SUN'IY INTELLEKT</div>
+        </div>
+        <div class="marquee-rail-reverse">
+            <div class="marquee-segment"><i class="ri-star-line"></i> PREMIUM SIFAT</div>
+            <div class="marquee-segment"><i class="ri-rocket-line"></i> ZAMONAVIY</div>
+            <div class="marquee-segment"><i class="ri-shield-check-line"></i> ISHONCHLI</div>
+            <div class="marquee-segment"><i class="ri-heart-line"></i> MIJOZ UCHUN</div>
+            <div class="marquee-segment"><i class="ri-star-line"></i> PREMIUM SIFAT</div>
+            <div class="marquee-segment"><i class="ri-rocket-line"></i> ZAMONAVIY</div>
+            <div class="marquee-segment"><i class="ri-shield-check-line"></i> ISHONCHLI</div>
+            <div class="marquee-segment"><i class="ri-heart-line"></i> MIJOZ UCHUN</div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MODIFIED CONTACT SECTION                       -->
+    <!-- ============================================ -->
+    <section id="contact" class="fade-reveal">
+        <div class="wrapper">
+            <div class="section-header">
+                <span class="section-lbl">Bog'lanish</span>
+                <h2 class="section-heading">Keling, birgalikda<br>loyiha yaratamiz.</h2>
+            </div>
+            <p class="contact-intro">
+                Keling, loyihangizni birgalikda amalga oshiramiz.<br>
+                Telegram orqali bemalol bog'lanishingiz mumkin.
+            </p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="ri-map-pin-2-fill"></i></div>
+                    <div class="contact-content">
+                        <h4>Manzil</h4>
+                        <p>Namangan, Mingbuloq</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="ri-time-line"></i></div>
+                    <div class="contact-content">
+                        <h4>Ish vaqti</h4>
+                        <p>09:00 — 21:00</p>
+                    </div>
+                </div>
+                <a href="https://t.me/najimiddinov" target="_blank" class="contact-card-link">
+                    <div class="contact-icon"><i class="ri-telegram-fill"></i></div>
+                    <div class="contact-content">
+                        <h4>Telegram</h4>
+                        <p>@najimiddinov</p>
+                    </div>
+                </a>
+                <a href="https://instagram.com/proo_coder" target="_blank" class="contact-card-link">
+                    <div class="contact-icon"><i class="ri-instagram-line"></i></div>
+                    <div class="contact-content">
+                        <h4>Instagram</h4>
+                        <p>proo_coder</p>
+                    </div>
+                </a>
+                <a href="https://facebook.com/PROOCODER" target="_blank" class="contact-card-link">
+                    <div class="contact-icon"><i class="ri-facebook-circle-fill"></i></div>
+                    <div class="contact-content">
+                        <h4>Facebook</h4>
+                        <p>PROOCODER</p>
+                    </div>
+                </a>
+                <a href="https://t.me/proo_coder_bot" target="_blank" class="contact-card-link">
+                    <div class="contact-icon"><i class="ri-robot-2-fill"></i></div>
+                    <div class="contact-content">
+                        <h4>Telegram Bot</h4>
+                        <p>@proo_coder_bot</p>
+                    </div>
+                </a>
+                <a href="https://t.me/PROO_CODE" target="_blank" class="contact-card-link">
+                    <div class="contact-icon"><i class="ri-megaphone-fill"></i></div>
+                    <div class="contact-content">
+                        <h4>Telegram Kanal</h4>
+                        <p>PROO_CODE</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================ -->
+
+    <footer>
+        <div class="wrapper footer-split-row">
+            <div class="footer-brand">
+                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="90" stroke="#ff9800" stroke-width="2" stroke-dasharray="6 6" opacity="0.3"/>
+                    <circle cx="100" cy="100" r="82" stroke="#ff9800" stroke-width="1" opacity="0.4"/>
+                    <rect x="30" y="50" width="140" height="80" rx="10" stroke="#ff9800" stroke-width="1.5" fill="none" opacity="0.6"/>
+                    <circle cx="50" cy="66" r="4" fill="#ff5722"/>
+                    <circle cx="68" cy="66" r="4" fill="#ffc107"/>
+                    <circle cx="86" cy="66" r="4" fill="#4caf50"/>
+                    <text x="100" y="107" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="700" fill="#ff9800" text-anchor="middle" letter-spacing="0.5">/ &gt;</text>
+                    <circle cx="158" cy="52" r="18" stroke="#ff9800" stroke-width="2.5" fill="none" opacity="0.5"/>
+                    <circle cx="158" cy="52" r="9" stroke="#ff9800" stroke-width="1.5" fill="none" opacity="0.3"/>
+                </svg>
+                <span>PROO_<em>CODER</em></span>
+            </div>
+            <div>
+                <span class="footer-copyright-note">© 2026 PROO_CODER</span>
+                <span class="footer-tagline" style="display:block;margin-top:4px;"><span>Code</span> • <span>Learn</span> • <span>Innovate</span></span>
+            </div>
+            <div class="totop-trigger" id="toTop"><i class="ri-arrow-up-line"></i></div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('preloaderOverlay');
+            setTimeout(() => {
+                loader.classList.add('hidden');
+                revealOnScroll();
+                triggerSkillBars();
+            }, 1200);
+        });
+
+        const canvas = document.getElementById('gravitational-canvas');
+        const ctx = canvas.getContext('2d');
+        let particlesList = [];
+        const particlesCount = 70;
+
+        function adjustCanvasDimensions() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', adjustCanvasDimensions);
+        adjustCanvasDimensions();
+
+        class ParticleNode {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.radius = Math.random() * 1.5 + 0.4;
+                this.baseXSpeed = Math.random() * 0.2 - 0.1;
+                this.baseYSpeed = Math.random() * 0.2 - 0.1;
+                this.opacity = Math.random() * 0.4 + 0.1;
+            }
+            updateAndDraw() {
+                this.x += this.baseXSpeed;
+                this.y += this.baseYSpeed;
+                if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+                    this.reset();
+                }
+                ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initDust() {
+            for (let i = 0; i < particlesCount; i++) {
+                particlesList.push(new ParticleNode());
+            }
+        }
+
+        function paintDustLoop() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particlesList.forEach(particle => particle.updateAndDraw());
+            requestAnimationFrame(paintDustLoop);
+        }
+        initDust();
+        paintDustLoop();
+
+        const gravityCursor = document.getElementById('gravityCursor');
+        const gravityCursorDot = document.getElementById('gravityCursorDot');
+        let actualX = 0,
+            actualY = 0;
+        let ringX = 0,
+            ringY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            actualX = e.clientX;
+            actualY = e.clientY;
+            gravityCursorDot.style.left = actualX + 'px';
+            gravityCursorDot.style.top = actualY + 'px';
+        });
+
+        function loopCursorLag() {
+            ringX += (actualX - ringX) * 0.12;
+            ringY += (actualY - ringY) * 0.12;
+            gravityCursor.style.left = ringX + 'px';
+            gravityCursor.style.top = ringY + 'px';
+            requestAnimationFrame(loopCursorLag);
+        }
+        loopCursorLag();
+
+        document.querySelectorAll('a, button, .pill-btn').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                gravityCursor.style.width = '55px';
+                gravityCursor.style.height = '55px';
+                gravityCursor.style.backgroundColor = 'rgba(255, 152, 0, 0.05)';
+                gravityCursor.style.borderColor = 'var(--accent-electric)';
+            });
+            item.addEventListener('mouseleave', () => {
+                gravityCursor.style.width = '32px';
+                gravityCursor.style.height = '32px';
+                gravityCursor.style.backgroundColor = 'transparent';
+                gravityCursor.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const line = document.getElementById('progressLine');
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            const progressPercent = (window.scrollY / maxScroll) * 100;
+            line.style.width = progressPercent + '%';
+        });
+
+        const phrasePool = ["Android Dasturchi.", "Telegram Bot Dasturchi.", "Web Dasturchi.", "Python Dasturchi.", "AI Dasturchi.", "Blender.", "Kontent Yaratuvchi."];
+        let wordCursor = 0;
+        let characterCursor = 0;
+        let modeDelete = false;
+        const targetElement = document.getElementById('carouselRoles');
+
+        function animateTypist() {
+            const activeWord = phrasePool[wordCursor];
+            if (modeDelete) {
+                targetElement.innerHTML = activeWord.substring(0, characterCursor - 1);
+                characterCursor--;
+            } else {
+                targetElement.innerHTML = activeWord.substring(0, characterCursor + 1);
+                characterCursor++;
+            }
+
+            let intervalTime = modeDelete ? 40 : 90;
+
+            if (!modeDelete && characterCursor === activeWord.length) {
+                intervalTime = 2200;
+                modeDelete = true;
+            } else if (modeDelete && characterCursor === 0) {
+                modeDelete = false;
+                wordCursor = (wordCursor + 1) % phrasePool.length;
+                intervalTime = 500;
+            }
+
+            setTimeout(animateTypist, intervalTime);
+        }
+        setTimeout(animateTypist, 1500);
+
+        document.querySelectorAll('.magnetic-btn').forEach(button => {
+            button.addEventListener('mousemove', function(e) {
+                const bounds = this.getBoundingClientRect();
+                const force = parseFloat(this.getAttribute('data-influence')) || 0.3;
+                const targetX = e.clientX - bounds.left - (bounds.width / 2);
+                const targetY = e.clientY - bounds.top - (bounds.height / 2);
+                this.style.transform = `translate(${targetX * force}px, ${targetY * force}px)`;
+            });
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translate(0px, 0px)';
+            });
+        });
+
+        const frame = document.getElementById('monolithFrame');
+        if (frame) {
+            document.addEventListener('mousemove', (e) => {
+                const centerX = window.innerWidth / 2;
+                const centerY = window.innerHeight / 2;
+                const xOffset = -(e.clientY - centerY) / 50;
+                const yOffset = (e.clientX - centerX) / 50;
+                frame.style.transform = `rotateX(${xOffset}deg) rotateY(${yOffset}deg)`;
+            });
+            frame.addEventListener('mouseleave', () => {
+                frame.style.transform = `rotateX(0deg) rotateY(0deg)`;
+            });
+        }
+
+        function revealOnScroll() {
+            const elements = document.querySelectorAll('.fade-reveal');
+            elements.forEach(node => {
+                const boundaries = node.getBoundingClientRect().top;
+                if (boundaries < window.innerHeight - 80) {
+                    node.classList.add('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', revealOnScroll);
+
+        function triggerSkillBars() {
+            const elements = document.querySelectorAll('.progress-filler');
+            elements.forEach(bar => {
+                const percentValue = bar.getAttribute('data-fill');
+                bar.style.width = percentValue;
+            });
+        }
+
+        document.querySelectorAll('.pill-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelector('.pill-btn.active').classList.remove('active');
+                btn.classList.add('active');
+                const filterVal = btn.getAttribute('data-filter');
+
+                document.querySelectorAll('.project-deck-card').forEach(card => {
+                    if (filterVal === 'all' || card.getAttribute('data-cat') === filterVal) {
+                        card.style.display = 'block';
+                        setTimeout(() => card.style.opacity = '1', 50);
+                    } else {
+                        card.style.opacity = '0';
+                        setTimeout(() => card.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+
+        document.getElementById('toTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Counter animation
+        const counterNodes = document.querySelectorAll('.counter-node');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const stop = parseInt(el.getAttribute('data-stop'));
+                    let current = 0;
+                    const duration = 2000;
+                    const step = Math.max(1, Math.floor(stop / 60));
+                    const interval = Math.floor(duration / 60);
+
+                    const counter = setInterval(() => {
+                        current += step;
+                        if (current >= stop) {
+                            current = stop;
+                            clearInterval(counter);
+                        }
+                        const span = el.querySelector('span');
+                        if (span) {
+                            el.innerHTML = current + '<span>+</span>';
+                        } else {
+                            el.textContent = current + '+';
+                        }
+                    }, interval);
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counterNodes.forEach(node => counterObserver.observe(node));
+    </script>
 </body>
 </html>
